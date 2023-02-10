@@ -84,7 +84,7 @@ header{
 }
 
 .aside{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     top: 30%;
@@ -144,6 +144,7 @@ header{
 
     .navbar{
         flex: 1;
+        
     }
 
     .title, .sub-title{
@@ -209,5 +210,10 @@ header{
 @media only screen and (max-width: 400px){
     .nav-items{
         left: 35%;
+    }
+
+    .navbar{
+        padding-right: 10px;
+        justify-content: flex-end;
     }
 }
