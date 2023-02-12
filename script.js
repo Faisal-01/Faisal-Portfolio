@@ -3,8 +3,6 @@ const cross = document.querySelector(".cross");
 const modal = document.querySelector(".modal");
 const navItems = document.querySelector(".nav-items");
 const progressLine = document.querySelector(".progress-line");
-// console.log(progressLine.style.height)
-
 
 bars.addEventListener("click", () => {
     bars.classList.add("hide");
@@ -21,11 +19,26 @@ cross.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-    // console.log(window.document.body.scrollHeight);
-    console.log(window.pageYOffset / window.document.body.scrollHeight * 200);
     let progress = 40;
      progress = progress + 
       (window.pageYOffset / window.document.body.scrollHeight) * 200;
-    console.log(progress);
     progressLine.style.height = progress + "px";
+})
+
+// const sections = document.querySelectorAll('section');
+// console.log(sections);
+// sections.forEach((section) => {
+//     section
+// })
+
+const list = document.querySelectorAll(".nav-items > li");
+list.forEach((item) => {
+    item.addEventListener("click", () => {
+        const element = document.getElementById(item.textContent.toLowerCase());
+
+        window.scrollTo(0, 
+        element.getBoundingClientRect().top +
+            document.documentElement.scrollTop - 80
+        );
+    })
 })
