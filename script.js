@@ -19,9 +19,13 @@ cross.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-    let progress = 40;
+    let progress = 45;
      progress = progress + 
       (window.pageYOffset / window.document.body.scrollHeight) * 200;
+      if(progress > 200)
+      {
+        progress = 200;
+      }
     progressLine.style.height = progress + "px";
 })
 
@@ -40,4 +44,28 @@ list.forEach((item) => {
         modal.classList.remove("show");
         navItems.classList.remove("show");
     })
+})
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            console.log(entry.target)
+            if(!entry.isIntersecting){
+                return;
+            }
+            entry.target.classList.remove("animate");
+            observer.unobserve(entry.target)
+        })
+
+        // entry.target.classList.remove("animate");
+    },
+    {
+        threshold: .25
+    }
+);
+
+const sections = document.querySelectorAll("section");
+sections.forEach((section) => {
+
+    observer.observe(section);
 })
