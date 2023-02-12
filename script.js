@@ -25,12 +25,6 @@ window.addEventListener("scroll", () => {
     progressLine.style.height = progress + "px";
 })
 
-// const sections = document.querySelectorAll('section');
-// console.log(sections);
-// sections.forEach((section) => {
-//     section
-// })
-
 const list = document.querySelectorAll(".nav-items > li");
 list.forEach((item) => {
     item.addEventListener("click", () => {
@@ -40,5 +34,10 @@ list.forEach((item) => {
         element.getBoundingClientRect().top +
             document.documentElement.scrollTop - 80
         );
+
+        cross.classList.remove("show");
+        bars.classList.remove("hide");
+        modal.classList.remove("show");
+        navItems.classList.remove("show");
     })
 })
