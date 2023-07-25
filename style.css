@@ -171,7 +171,8 @@ header{
     color: white;
     border: none;
     font-size: 20px;
-    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .skills {
@@ -230,6 +231,29 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+
+.overlay{
+    position: absolute;
+    top: 5px;
+    width: 60%;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    visibility: hidden;
+}
+
+.overlay a{
+    color: white;
+}
+
+.project-image:hover .overlay{
+    visibility: visible;
 }
 
 .project-image > img{
@@ -241,15 +265,23 @@ header{
     flex-direction: column;
     width: 30%;
     justify-content: center;
+    gap: 5px;
+}
+
+
+.project-description{
+    text-align: justify;
 }
 
 .project-files{
     width: 110px;
-    height: 40px;
+    /* height: 40px; */
     background-color: var(--color-secondary);
     color: white;
     font-size: 15px;
     border: none;
+    text-align: center;
+    padding: 5px;
 }
 
 .contact{
@@ -320,6 +352,12 @@ section{
 
     .project-details{
         width: 40%;
+    }
+
+    .overlay{
+        
+        width: 75%;
+        height: 85%;
     }
 }
 
@@ -436,9 +474,6 @@ section{
         padding: 10px;
     }
 
-    .project-description{
-        text-align: justify;
-    }
 
     .project-files{
         margin: 0 auto;
