@@ -5,9 +5,13 @@
 
 :root{
     --font: 'Poppins', sans-serif;
-    --color-secondary: hsl(225, 62%, 66%);
+    /* --color-secondary: #738dde; */
+    --color-secondary: #55F;
     --color-secondary-dark: hsl(225, 61%, 58%);
-    --color-secondary-light: hsl(231, 17%, 76%);
+    --color-secondary-light: hsla(225, 61%, 58%, 0.267);
+    /* --text-color: hsl(240, 1%, 43%); */
+    --text-color: hsl(240, 1%, 37%);
+
 }
 
 *{
@@ -35,6 +39,8 @@ header{
     height: 80px;
     display: flex;
     background-color: white;
+    background-color: var(--color-secondary-dark);
+    color: white;
     border-bottom: 1px solid black;
     position: fixed;
     z-index: 2;
@@ -54,6 +60,7 @@ header{
 .logo-text{
     font-size: 30px;
     font-weight: 400;
+    
 }
 
 .navbar{
@@ -79,6 +86,7 @@ header{
     align-items: center;
     gap: 40px;
     padding-top: 80px;
+    /* color: var(--color-secondary); */
 }
 
 .title{
@@ -112,7 +120,7 @@ header{
 }
 
 .complete-line{
-    border: 2px solid var(--color-secondary-light);
+    border: 2px solid hsl(225, 43%, 80%);
     height: 200px;
 }
 
@@ -127,7 +135,6 @@ header{
     flex-direction: column;
     gap: 5px;
     font-size: 25px;
-    
 }
 
 /* .fa-brands{
@@ -141,7 +148,7 @@ header{
 .about{
     width: 100%;
     height: calc(100vh - 80px);
-    background-color: #eee;
+    background-color: var(--color-secondary-light);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,7 +184,7 @@ header{
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(3, 110px);
+    grid-template-columns: repeat(3, 120px);
     gap: 10px;
 }
 
@@ -187,12 +194,18 @@ header{
     justify-content: center;
     align-items: center;
     color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
+    font-size: 20px;
 }
 
 .heading{
     margin: 0 auto;
+    font-size: 40px;
+}
+
+.description{
+    font-size: 20px;
+    color: var(--text-color);
 }
 
 .subheading{
@@ -201,7 +214,7 @@ header{
 }
 
 .subheading-font{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .projects{
@@ -232,6 +245,10 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.project-title{
+    font-size: 25px;
 }
 
 
@@ -271,23 +288,27 @@ header{
 
 .project-description{
     text-align: justify;
+    font-size: 18px;
+    color: var(--text-color);
 }
 
 .project-files{
-    width: 110px;
+    /* width: 120px; */
     /* height: 40px; */
     background-color: var(--color-secondary);
     color: white;
     font-size: 15px;
     border: none;
     text-align: center;
-    padding: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 0 auto 0 0 ;
 }
 
 .contact{
     width: 100%;
     height: calc(100vh - 160px);
-    background-color: #eee;
+    background-color: var(--color-secondary-light);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,6 +321,8 @@ header{
 
 .question{
     margin-top: 10px;
+    color: var(--text-color);
+    font-size: 20px;
 }
 
 .btn-contact{
@@ -322,7 +345,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eee;
+    background-color: var(--color-secondary-light);
 }
 
 section{
