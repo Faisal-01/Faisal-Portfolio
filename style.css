@@ -8,7 +8,8 @@
     /* --color-secondary: #738dde; */
     --color-secondary: #55F;
     --color-secondary-dark: hsl(225, 61%, 58%);
-    --color-secondary-light: hsla(225, 61%, 58%, 0.267);
+    /* --color-secondary-light: hsla(225, 83%, 68%, 0.267); */
+    --color-secondary-light: hsla(225, 61%, 58%, 0.253);
     /* --text-color: hsl(240, 1%, 43%); */
     --text-color: hsl(240, 1%, 37%);
 
@@ -87,6 +88,10 @@ header{
     gap: 40px;
     padding-top: 80px;
     /* color: var(--color-secondary); */
+}
+
+.hero-heading{
+    color: var(--color-secondary-dark);
 }
 
 .title{
@@ -346,6 +351,7 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: var(--color-secondary-light);
+    /* color: var(--color-secondary-dark); */
 }
 
 section{
