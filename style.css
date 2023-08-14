@@ -219,7 +219,11 @@ header{
 
 .description{
     font-size: 20px;
+}
+
+.description > p{
     color: var(--text-color);
+
 }
 
 .subheading{
